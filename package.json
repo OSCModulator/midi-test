@@ -1,0 +1,9 @@
+{
+  "name": "your-app",
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "coffee-script": "^1.8.0",
+    "midi": "^0.9.0"
+  }
+}
