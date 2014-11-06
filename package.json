@@ -1,7 +1,7 @@
 {
-  "name": "your-app",
+  "name": "midi-test",
   "version": "0.1.0",
-  "main": "main.js",
+  "main": "midi-test.js",
   "dependencies": {
     "coffee-script": "^1.8.0",
     "midi": "^0.9.0"
