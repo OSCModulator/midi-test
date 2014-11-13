@@ -1,6 +1,8 @@
 
 midi = require('midi')
 
+count = 0
+
 parser = (port, msg) ->
     channel = msg[0] % 16 + 1
     switch msg[0] / 16  # message type
@@ -20,7 +22,8 @@ start = (midi_in, port, virtual=no) ->
 
   midi_in["open#{virtual and 'Virtual' or ''}Port"] port
   midi_in.on 'message', (deltaTime, msg) ->
-    console.log("message received #{parser(port, msg)}")
+    count++
+    console.log("#{count}: message received #{parser(port, msg)}")
 
 # This works just fine
 test1 = ->
@@ -67,6 +70,6 @@ Steps to reproduce crash:
 - Type random letters for around 30 seconds.
 '''
 #test1()
-test2()
-#test3()
+#test2()
+test3()
 #test4()
